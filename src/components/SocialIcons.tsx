@@ -55,14 +55,16 @@ const SocialIcons = () => {
               href={social.url}
               className="group relative flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg border-2 border-gray-200 transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-110 hover:-translate-y-2"
               aria-label={social.name}
+              style={{ perspective: '1000px' }}
             >
               {/* Background with proper gradient */}
               <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${social.gradientColors} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
               
-              {/* Icon */}
+              {/* Icon with flip animation */}
               <IconComponent 
                 size={28} 
-                className="relative z-10 text-gray-600 group-hover:text-white transition-colors duration-300"
+                className="relative z-10 text-gray-600 group-hover:text-white transition-all duration-300 group-hover:[transform:rotateY(360deg)]"
+                style={{ transformStyle: 'preserve-3d' }}
               />
             </a>
           );
