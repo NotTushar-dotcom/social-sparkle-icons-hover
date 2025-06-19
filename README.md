@@ -1,4 +1,5 @@
 # Welcome to your Lovable project
+Author is Tushh
 
 ## Project info
 
